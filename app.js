@@ -109,14 +109,17 @@ buttonsContainer.addEventListener("click", (event) => {
                         }
 
                         if (previousDisplayField.innerText.includes("/")) {
+                            let result = parseFloat(previousNumber / currentNumber).toFixed(2);
                             if(currentNumber == 0) 
                             {currentDisplayField.innerText = "Error";
-                        } else {
-                            
-                            const result = previousNumber / currentNumber;
-                            currentDisplayField.innerText =  parseFloat(result).toFixed(2); 
+                        } else if(result.length > 8) {
+                            currentDisplayField.innerText = "Error"
+                            previousDisplayField.innerText = "";
                         }
-                        previousDisplayField.innerText = "";
+                        else{
+                            currentDisplayField.innerText = result
+                            previousDisplayField.innerText = "";
+                        }
                         }
                     }
                     break;
