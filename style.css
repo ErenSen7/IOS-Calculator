@@ -9,6 +9,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #677381;
 }
 .container{
     background-color: black;
@@ -52,7 +53,7 @@ body{
     font-size: 45px;
     cursor: pointer;
     transition: all 0.3 ease-in-out;
-    background-color: #333333;
+    background-color: #333;
     height: 100px;
     width: 100px;
     color: white;
@@ -74,4 +75,5 @@ body{
 .button:hover{
     opacity: 0.5;
 }
+
 
